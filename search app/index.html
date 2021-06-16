@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>rockaraoke</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="searchbar">
+            <div class="search">
+                <input type="text" id="bar">
+                <select id="by">
+                    <option value="song">By Song</option>
+                    <option value="artist">By Artist</option>
+                </select>
+            </div>
+            <button id="search-btn">Search</button>
+        </div>
+        <div class="container__result">
+            <div class="results">
+
+            </div>
+            <div class="form">
+                <input type="text" id="name" placeholder="Name">
+                <input type="song" id="song" placeholder="Song">
+            </div>
+        </div>
+    </div>
+    <script src="./Airtable_work.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

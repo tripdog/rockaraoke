@@ -10418,7 +10418,7 @@ hr.light {
 		color: #fff;
 	}
 	#mainNav .navbar-nav .nav-item .nav-link {
-		color: #495057);
+		color: (#495057);
 		padding: 0 1rem;
 	}
 	#mainNav .navbar-nav .nav-item .nav-link:hover {
@@ -10536,8 +10536,8 @@ header.masthead h1 {
 #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption,
 #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption {
 	opacity: 1;
+	font-family: '', sans-serif;
 }
-font-family: '', sans-serif;
 .text-white-75 {
 	color: rgba(255, 255, 255, 0.75);
 }
@@ -10601,4 +10601,75 @@ header.masthead::after {
 }
 .foot-block {
 background-color: var(--danger);
+}
+
+@media (min-width: 768px) {
+			#by {
+				min-width:200px;
+	}
+	#bar {
+		width: 53%;
+	}	
+	#name {
+	width: 90%;
+	}
+}
+#bar, #name, #by{
+	margin-right:15px;
+	margin-bottom: 16px;
+}
+
+#add, #search-btn{
+	margin-top:-7px;
+}
+
+#song-search {
+	padding-top: 8rem;
+	padding-bottom:4rem;
+}
+
+.searchbar h1{
+	margin-bottom: 4rem;
+}
+
+div.songTable {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+.divTable.songTable .divTableCell, .divTable.songTable .divTableHead {
+  padding: 15px 10px;
+}
+.divTable.songTable .divTableRow:nth-child(even) {
+  background: #EEEEEE;
+}
+.divTable.songTable .divTableHeading {
+  background: #F80407;
+}
+.divTable.songTable .divTableHeading .divTableHead {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: left;
+}
+.divTable{ 
+	display: table; 
+}
+.divTableRow { 
+	display: table-row; 
+}
+.divTableHeading { 
+	display: table-header-group;
+}
+.divTableCell, .divTableHead { 
+	display: table-cell;
+}
+.divTableHeading { 
+	display: table-header-group;
+}
+.divTableFoot { 
+	display: table-footer-group;
+}
+.divTableBody { 
+	display: table-row-group;
 }
