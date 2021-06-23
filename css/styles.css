@@ -10216,7 +10216,7 @@ hr.light {
         background-color: #fff;
     }
     #mainNav.navbar-scrolled .navbar-brand {
-        color: #212529;
+        color: #636464;
     }
     #mainNav.navbar-scrolled .navbar-brand:hover {
         color: #f4623a;
@@ -10509,7 +10509,7 @@ div.songTable {
 }
 
 .divTable.songTable .divTableHeading {
-    background: #F80407;
+    background: #dc3545;
 }
 
 .divTable.songTable .divTableHeading .divTableHead {
