@@ -1,0 +1,10 @@
+## Don't allow anyone to see my .htaccess file
+<Files .htaccess>
+  Order allow,deny
+  Deny from all
+</Files>
+
+## Redirect to www
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^rockaraoke.com [NC]
+RewriteRule ^(.*)$ http://www.rockaraoke.com/$1 [L,R=301]
