@@ -10558,3 +10558,10 @@ div.songTable {
     text-align: center;
     margin-bottom: 2em;
 }
+
+.foot-block {
+position: fixed;
+width: 100%;
+left: 0;
+bottom: 0;
+}

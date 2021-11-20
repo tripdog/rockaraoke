@@ -21,16 +21,16 @@ const displayResult = (arr) => {
         div.className = "divTableRow";
 
         const innerhtml = `
-                <div class="divTableCell">${item.SONG.toLowerCase().replace(/\b(\w)/g,(s) => s.toUpperCase())}</div>
-                <div class="divTableCell">${item.ARTIST.toLowerCase().replace(/\b(\w)/g,(s) => s.toUpperCase())}</div>
+                <div class="divTableCell">${item.SONG.toLowerCase().replace(/\b(\w)/g, (s) => s.toUpperCase())}</div>
+                <div class="divTableCell">${item.ARTIST.toLowerCase().replace(/\b(\w)/g, (s) => s.toUpperCase())}</div>
                 `;
         div.innerHTML = innerhtml
         results.appendChild(div)
     })
 }
 
-function resetFormFields(){
-    document.querySelector("#name_inp").value="";
+function resetFormFields() {
+    document.querySelector("#name_inp").value = "";
     searchBar.value = "";
 }
 
@@ -48,7 +48,7 @@ search_btn.addEventListener("click", () => {
             filteredArr = data.filter(item => item.ARTIST.toLowerCase().includes(userData.toLowerCase()))
         }
         displayResult(filteredArr)
-        records = [] 
+        records = []
 
         selectedSong = {}
         const all_cbs = document.querySelectorAll(".btn-sel")
