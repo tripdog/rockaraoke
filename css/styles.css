@@ -9895,10 +9895,10 @@ button.bg-dark:focus {
         text-align: center !important;
     }
     .divTableCell, .divTableHead {
-    font-size: 32px;
+    font-size: 1rem;
     }
     divTable.songTable .divTableHeading .divTableHead {
-        font-size: 32px !important;
+        font-size: 1 rem !important;
         font-weight: bold;
         color: #FFFFFF;
         text-align: left;
