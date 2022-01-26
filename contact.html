@@ -34,9 +34,12 @@
                         alt="menu" width="30px"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="/index.html#page-top">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./search.html">Song Search</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./singers.html">On Deck</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/client-search.html">Song Search</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./players/search.html">Players</a></li>
                 </ul>
             </div>
         </div>
@@ -46,77 +49,159 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Get In Touch.</h2>
+                    <h2 class="mt-0">It’s Showtime.</h2>
 
-                    <p class="text-muted mb-5">Ready to book Rockaraoke for your next event? Give us a call or drop us a
-                        line.</p>
+                    <p class="text-muted mb-5">Ready to book Rockaraoke for your next event? Please fill in the form
+                        below. Provide as much or little information as you like. Required fields are marked with
+                        an asterisk.</p>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="container">
-                    <form>
+                    <form action="/php/contact-process.php" id="contact-form" method="POST">
+
+                        <input type="text" class="form-control form-control-custom" tabindex="-1" id="text-field"
+                            name="text-field">
+
                         <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="First name">First name</label>
-                                <input type="text" class="form-control form-control-lg" placeholder="First name">
+                            <div id="first-name-field" class="form-group col-md-6">
+                                <label class="req" for="first_name">First name</label>
+                                <input type="text" id="form-first-name" class="form-control form-control-lg"
+                                    placeholder="First name" name="first_name" required>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="Last name">Last name</label>
-                                <input type="text" class="form-control form-control-lg" placeholder="Last name">
+                            <div id="last-name-field" class="form-group col-md-6">
+                                <label class="req" for="last_name">Last name</label>
+                                <input type="text" id="form-last-name" class="form-control form-control-lg"
+                                    placeholder="Last name" name="last_name" required>
                             </div>
                             <div class="form-group col-md-12">
-                                <label for="Company name">Company name</label>
-                                <input type="text" class="form-control form-control-lg" placeholder="Company name">
+                                <label for="company_name">Company name</label>
+                                <input type="text" id="form-company-name" class="form-control form-control-lg"
+                                    placeholder="Company name" name="company_name">
+                            </div>
+                            <div id="email-field" class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="email" id="form-email" class="form-control form-control-lg"
+                                    placeholder="Email" name="email">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control form-control-lg" id="inputEmail4"
-                                    placeholder="Email">
+                                <label for="job_title">Job title</label>
+                                <input type="text" id="form-job-title" class="form-control form-control-lg"
+                                    placeholder="Job title" name="job_title">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="title">Job title</label>
-                                <input type="text" class="form-control form-control-lg" id="jobTitle"
-                                    placeholder="Job title">
+                                <label for="date">Date of event</label>
+                                <input type="date" id="form-date" class="form-control form-control-lg"
+                                    placeholder="Date" name="date">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputDate">Date of event</label>
-                                <input type="date" class="form-control form-control-lg" id="inputDate"
-                                    placeholder="Date">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="numberofattendees">Approximate number of attendees</label>
-                                <input type="number" class="form-control form-control-lg" id="atendeeNum"
-                                    placeholder="Number of attendees">
+                                <label for="attendees">Approximate number of attendees</label>
+                                <input type="number" id="form-atendees" class="form-control form-control-lg"
+                                    placeholder="Number of attendees" name="attendees">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputAddress">Venue Address</label>
-                            <input type="text" class="form-control form-control-lg" id="inputAddress"
-                                placeholder="1234 Main St">
+                            <label for="address">Venue Address</label>
+                            <input type="text" id="form-address" class="form-control form-control-lg"
+                                placeholder="1234 Main St" name="address">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputCity">City</label>
-                                <input type="text" class="form-control form-control-lg" id="inputCity">
+                                <label for="city">City</label>
+                                <input type="text" id="form-city" class="form-control form-control-lg" name="city">
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputState">State</label>
-                                <select id="inputState" class="form-control form-control-lg">
+                                <label for="state">State</label>
+                                <select id="form-state" class="form-control form-control-lg" name="state">
                                     <option selected>Choose...</option>
-                                    <option>...</option>
+                                    <option>Alabama</option>
+                                    <option>Alaska</option>
+                                    <option>Arizona</option>
+                                    <option>Arkansas</option>
+                                    <option>California</option>
+                                    <option>Colorado</option>
+                                    <option>Connecticut</option>
+                                    <option>Delaware</option>
+                                    <option>District</option>
+                                    <option>Florida</option>
+                                    <option>Georgia</option>
+                                    <option>Hawaii</option>
+                                    <option>Idaho</option>
+                                    <option>Illinois</option>
+                                    <option>Indiana</option>
+                                    <option>Iowa</option>
+                                    <option>Kansas</option>
+                                    <option>Kentucky</option>
+                                    <option>Louisiana</option>
+                                    <option>Maine</option>
+                                    <option>Maryland</option>
+                                    <option>Massachusetts</option>
+                                    <option>Michigan</option>
+                                    <option>Minnesota</option>
+                                    <option>Mississippi</option>
+                                    <option>Missouri</option>
+                                    <option>Montana</option>
+                                    <option>Nebraska</option>
+                                    <option>Nevada</option>
+                                    <option>New Hampshire</option>
+                                    <option>New Jersey</option>
+                                    <option>New Mexico</option>
+                                    <option>New York</option>
+                                    <option>North Carolina</option>
+                                    <option>North Dakota</option>
+                                    <option>Ohio</option>
+                                    <option>Oklahoma</option>
+                                    <option>Oregon</option>
+                                    <option>Pennsylvania</option>
+                                    <option>Rhode Island</option>
+                                    <option>South Carolina</option>
+                                    <option>South Dakota</option>
+                                    <option>Tennessee</option>
+                                    <option>Texas</option>
+                                    <option>Utah</option>
+                                    <option>Vermont</option>
+                                    <option>Virginia</option>
+                                    <option>West Virginia</option>
+                                    <option>Washington</option>
+                                    <option>Wisconsin</option>
+                                    <option>Wyoming</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-2">
-                                <label for="inputZip">Zip</label>
-                                <input type="text" class="form-control form-control-lg" id="inputZip">
+                                <label for="zip">Zip</label>
+                                <input type="text" id="form-zip" class="form-control form-control-lg" name="zip">
                             </div>
-                            <div class="form-group col-md-12">
-                                <label for="message">Message</label>
-                                <textarea class="form-control form-control-lg" id="message">Message</textarea>
+                            <div id="message-field" class="form-group col-md-12">
+                                <label class="req" for="message">Message</label>
+                                <textarea id="form-message" class="form-control form-control-lg" name="message"
+                                    placeholder="1234 Main St" required></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-send" role="button">Send Message</button>
                     </form>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <h2 class="mt-0">Give us a call.</h2>
+                            <p class="text-muted mb-5">Call us if you prefer or reach out via FaceBook.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                            <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                            <div><a href="tel:12069406716">206-940-6716</a></div>
+                        </div>
+                        <div class="col-lg-4 mr-auto text-center">
+                            <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                            <div><a class="d-block" href="mailto:info@rockaraoke.com">info@rockaraoke.com</a></div>
+                        </div>
+                        <div class="col-lg-4 mr-auto text-center contact-channels">
+                            <i class="fab fa-facebook-square fa-3x mb-3 text-muted"></i>
+                            <div><a class="d-block" href="https://www.facebook.com/rockaraoke"
+                                    target="_blank">facebook.com/rockaraoke</a></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,7 +214,9 @@
         </div>
     </footer>
     <!-- Bootstrap core JS-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
@@ -138,6 +225,8 @@
     <script src="/js/scripts.js"></script>
     <script src="/js/Airtable_work.js"></script>
     <script src="/js/index.js"></script>
+    <script src="/js/animate.js"></script>
+    <script src="/js/plugins/contact-form.js"></script>
 </body>
 
 </html>

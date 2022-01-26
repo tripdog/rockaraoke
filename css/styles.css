@@ -2490,6 +2490,10 @@ textarea.form-control.is-invalid {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.btn-send{
+    margin-top: 1.5em;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .btn {
         transition: none;
@@ -10585,3 +10589,33 @@ div.songTable {
     margin-bottom: 2em;
 }
 
+#contact .form-control-custom {
+    border: 0;
+    height: 2px;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+  }
+
+/* This puts an asterisk in front of the label text for required fields on the contact form */
+  .req::before {
+    content:'*';
+    color: #dc3545;
+    padding-right:5px;
+}
+
+#contact-form {
+    margin-bottom: 5em;
+}
+
+.contact-channels {
+    margin-bottom: 3em;
+}
+.thanks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 3px solid green;
+}
