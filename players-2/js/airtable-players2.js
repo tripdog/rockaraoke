@@ -86,7 +86,7 @@ async function fetchBoard() {
   loader.style.display = "flex";
   const board = await fetch("https://api.airtable.com/v0/appSKfLI8nR5HYQRi/Name%20and%20Song%20Title?view=Grid%20view", {
     headers: {
-      Authorization: `Bearer kkeyBOHvJMQ83qrxYK`,
+      Authorization: `Bearer keyBOHvJMQ83qrxYK`,
     },
   });
   return board;
